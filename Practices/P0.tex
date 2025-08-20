@@ -1,25 +1,155 @@
-\documentclass{article}
-\usepackage{graphicx} 
-\title{Practica 0}
-\author{Santiago Pichardo}
-\date{August 2025}
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1in]{geometry}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption} %figuras
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+\usepackage{biblatex}
+\addbibresource{bib/protocolo.bib}
+
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+%\usepackage[round]{natbib}
+\renewcommand{\baselinestretch}{1.5}
 \begin{document}
+%\frontmatter
+\begin{titlepage}
+		\setlength{\parindent}{0pt} \setlength{\parskip}{0pt}
+	
+		\begin{center}
+			\vfill 
+			
+			\begin{minipage}{\textwidth}
+				
+				\newcolumntype{V}{>{\centering\arraybackslash} m{.17\textwidth} }
+				\newcolumntype{C}{>{\centering\arraybackslash} m{.56\textwidth} }
+				
+				\begin{center}
+					\includegraphics[width=4.5cm]{UNAM_LOGO2.png}
+                    \includegraphics[width=3.6cm]{Escudo Fi.jpg}	
+				\end{center} 	
+				\begin{center}
+					\Huge\textbf{Universidad Nacional Autónoma de México}
+				\end{center} 
+				
+			\end{minipage}
+				
+			\vfill
+			
 
-\maketitle
+			
+			\begin{center}
+				%\medskip \rule{.9\textwidth}{2pt}
+				\vfill
+				\large Programación Orientada a Objetos 
+				%{\Large \bfseries  \title   }
+				%\medskip \rule{.9\textwidth}{2pt}
+			\end{center}
+			
+			\begin{center}
+				\vspace*{1cm}
+				{\huge Practica 0}\\
+				\vspace*{1cm}
+				
+				%PRESENTA:\\ \medskip
+				\begin{center}
+					ALUMNOS: \\
+					\large 320065570 \\
+                    \large 425133840 \\
+                    \large 423020252 \\
+                    \large 322229916 \\
+                    \large 425032224
+                    
+				\end{center}
+				
+				\bigskip
+				
+				Grupo: 7\\
+                Equipo: 3
+				\\
+				%Coadvisors
+				Semestre: \\
+                2026-I
+			\end{center}
+			
+			\vfill
+			
+			\begin{center}
+				{México, CDMX. Agosto 2025}\\
+			\end{center}
+			\cleardoublepage
+		\end{center}
+	\end{titlepage}
+ 
+\tableofcontents
+\clearpage
+    
+%\mainmatter
 
-\section{Introduction}
+\section{Introducción} 
+
+    \textbf{Planteamiento del problema:} Es necesario tener cierto conocimiento en el manejo de las herramientas LaTeX y Git, por lo cual se buscará tener un primer acercamiento a estos programas que serán utilizados a lo largo del curso.\\
+    
+    \textbf{Motivación:} A lo largo del presente curso el uso de los programas LaTeX y Git será una tarea diaria, por lo cual es importante tener un buen manejo de ellos para asi no presentar problemas, además de generar la suficientes habilidades para poder utilizar estos conocimientos en un futuro. \\
+    
+    \textbf{Objetivos:} Tener un primer encuentro con los progamas LaTeX y Git, conocer sus funciones básicas y generar un trabajo haciendo uso de ellas. 
+
+\section{Marco Teórico}
+
+Git se trata de un sistema de distribución de versiones (VCS, por sus siglas en inglés), este rastrea el historial de cambios conforme una persona participante del proyecto realicé un cambio dentro de este, permitiendo asi la recuperación de cualquier versión anterior~\cite{git}. Git brilla por ser un ambiente con control de versiones distribuidas, historia y trazabilidad, la capacidad de versionar el proyecto, y proporcionar un buen amibiente de trabajo y colaboración.\\
+
+Por su parte, LaTeX es un sistema diseñado para la escritura de documentos, este tiene un enfoque cientifico y técnico y busca generar una separación entre el formato del documento y el contenido escrito, permitiendo una mayor concentración en los escritos de los proyectos, además de contar con una amplia variedad de formatos autoaplicables para una gran variedad de documentos.~\cite{Latex}
+
+\section{Desarrollo}
+
+    A partir de las instrucciones dadas en clase, así como una serie de investigaciones por parte de cada uno de los integrantes del equipo, dependiendo de las plataformas utilizadas por cada uno, se realizó la instalación de java, ya sea desde la pagina oficial del desarrollador Oracle o utilizando los comandos desde la terminal de linux. \\
+
+    Posteriormente, se creó un repositorio de GitHub del cual cada uno de los integrantes tomó parte, generando por su cuenta una rama dentro del mismo repositorio.
+    
+
+\section{Resultados}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{imagrepositorio.PNG}
+    \caption{Creación de repositorio}
+\end{figure}
+
+Primero se tuvo que registrar una cuenta con un correo en GitHub, luego se creó el repositorio y se invitó a los demás integrantes del equipo a colaborar[1].
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{creación de carpeta.png}
+    \caption{Comandos para crear carpeta en Git}
+\end{figure}
+
+Para la creación de la carpeta se usó Git. Se configuró para conectarlo con GitHub, se clonó el repositorio localmente y se hizo una rama. Se usó \texttt{mkdir} para crear la carpeta, \texttt{add} y \texttt{commit} para registrar los cambios. Finalmente se hizo un \texttt{push}[2].
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{carpetas.PNG}
+    \caption{Carpetas en GitHub}
+\end{figure}
+
+Una vez hecho el push, la carpeta ya aparece en el repositorio de GitHub[3].
+
+
+\section{Conclusiones}
+La aplicación de los conceptos teóricos de GitHub y Git permitió comprender el uso esencial del control de versiones como herramienta para la gestión de proyectos, optimizando la organización de archivos y la colaboración en equipo.\\ 
+
+El uso de Pull Request como estrategia de protección de la rama principal evidenció lo importante que es integrar mecanismos de seguridad y revisión colectiva, lo cual fomenta la calidad y confiabilidad de todo nuestro repositorio que manejamos. \\
+
+LaTex nos muestra que este sistema de preparación de documentos es bastante completo, con una amplia linea de aprendizaje; como futura base de todas nuestras practicas observamos claramente que hay un gran uso de tipografias, un manejo de formulas matematicas y gestores de citas.   
 
 
 
 
 
-
-
-
-
-
-
-
+\printbibliography
 
 \end{document}
