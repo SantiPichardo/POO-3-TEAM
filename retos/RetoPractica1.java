@@ -1,5 +1,4 @@
 import java.util.Scanner;
-// Autor: Rubén Hernández aka "Casvel"
 public class RetoPractica1{
 
     public static void main(String[] args)
@@ -9,7 +8,6 @@ public class RetoPractica1{
         Scanner user= new Scanner(System.in);
         do
         {
-            //Hacemos los prints para el menú, y usamos print para que no salte la línea jajajaja
             System.out.println("Elige una opción");
             System.out.println("1.- Fibonacci");
             System.out.println("2.- Factorial");
@@ -19,7 +17,6 @@ public class RetoPractica1{
             opcion=user.nextInt();
             switch(opcion)
             {
-                //Nomás por mamón hacemos que se pida el dato al usuario y reutilizamos la variable user
                 case 1:
                     System.out.println("Introduce la posición que deseas en número");
                     System.out.print(">");
@@ -33,7 +30,6 @@ public class RetoPractica1{
                     dato=user.nextInt(); 
                     System.out.println("El factorial de "+dato+ " es "+ factorial(dato));
                 break;
-                    //Aquí no hay nada que comentar, solo que ya me dió hambre
                 case 3:
                     System.out.println("Introduce el número para la conjetura de Collatz");
                     System.out.print(">");
@@ -42,7 +38,7 @@ public class RetoPractica1{
                 break;
 
                 case 4:
-                    System.out.println("Adioooooooos");
+                    System.out.println("Saliendo");
                     System.exit(1);
                 break;
 
@@ -51,11 +47,8 @@ public class RetoPractica1{
         }while(opcion!=4);
     
     }
-    /*Hacemos los diferentes métodos separados, y recursivos.
-    Espero que si sean recursivos todos, porque si no me mato*/
     public static double fibonacci(int n)
     {
-        //Esto tarda MUCHO si ponemos más de 45, es lento de a madre
         return n==0?0:(n==1?1:fibonacci(n-1)+fibonacci(n-2));
     }
 
@@ -66,8 +59,6 @@ public class RetoPractica1{
 
     public static int collatz(int n)
     {   
-        //Este lo hice de puro mamón porque el profe dijo "Sorprendeme"
-        //No sé si debe solo de llegar a la conjetura o darte cuantos pasos, pero allá se vé
         return n==1?1:(n%2==0?collatz(n/2):collatz(3*n+1));
     }
 }
