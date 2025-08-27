@@ -38,7 +38,7 @@ public class RetoPractica1{
                 break;
 
                 case 4:
-                    System.out.println("Saliendo");
+                    System.out.println("Adioooooooos");
                     System.exit(1);
                 break;
 
@@ -59,6 +59,14 @@ public class RetoPractica1{
 
     public static int collatz(int n)
     {   
+        if(n==1)
+        {
+            System.out.print(n);
+        }
+        else 
+        {
+            System.out.print(n+"->");
+        }
         return n==1?1:(n%2==0?collatz(n/2):collatz(3*n+1));
     }
 }
