@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pascal {
+public class TrianguloPascal {
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
