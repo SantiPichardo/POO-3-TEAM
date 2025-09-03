@@ -8,7 +8,7 @@ public class P3 {
         // Opcional: mal uso de argumentos en la entrada indicar uso correcto
         if (args.length == 0) //usamos length para conocer el número de argumentos que mandamos en el main.
         {
-            System.out.println("Uso correcto: java Borrador argumento_1 argumento_2 argumento_n");
+            System.out.println("Uso correcto: java P3 argumento_1 argumento_2 argumento_n");
             return;
         }
 
