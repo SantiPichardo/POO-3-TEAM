@@ -9,8 +9,8 @@ public class Practica1{
         do
         {
             System.out.println("Elige una opción");
-            System.out.println("1.- Fibonacci");
-            System.out.println("2.- Factorial");
+            System.out.println("1.- Factorial");
+            System.out.println("2.- Fibonacci");
             System.out.println("3.- Collatz");
             System.out.println("4.- Salir");
             System.out.print(">");
@@ -18,17 +18,18 @@ public class Practica1{
             switch(opcion)
             {
                 case 1:
-                    System.out.println("Introduce la posición que deseas en número");
-                    System.out.print(">");
-                    dato=user.nextInt();
-                    System.out.println("El número "+ dato + " de fibonacci es "+ fibonacci(dato));
-                break;
-
-                case 2:
                     System.out.println("Introduce el número que quieres calcular su factorial");
                     System.out.print(">");
                     dato=user.nextInt(); 
                     System.out.println("El factorial de "+dato+ " es "+ factorial(dato));
+                break;
+
+                case 2:
+                    System.out.println("Introduce la posición que deseas en número");
+                    System.out.print(">");
+                    dato=user.nextInt();
+                    System.out.println("El número "+ dato + " de fibonacci es "+ fibonacci(dato));
+                    
                 break;
                 case 3:
                     System.out.println("Introduce el número para la conjetura de Collatz");
