@@ -8,10 +8,11 @@ public class Practica4 {
 
         Punto a= new Punto(Datos[0], Datos[1]);
         Punto b= new Punto();
-	b.x=Datos[2];
-	b.y=Datos[3];
+		b.x=Datos[2];
+		b.y=Datos[3];
 
         Ventana ventana = new Ventana(controlador,a,b);
         ventana.setVisible(true);
     }
 }
+
