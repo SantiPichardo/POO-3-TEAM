@@ -9,6 +9,6 @@ public class Punto {
     }
 
     public String toString() {
-        return "Punto (x = " + x + ", y = " + y + ")";
+        return "(" + x + ", " + y + ")";
     }
 }

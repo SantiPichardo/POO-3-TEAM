@@ -8,17 +8,11 @@ public class TrianguloEq {
 			for (byte i=0; i<args.length ;i++)
 				Datos[i]= Float.parseFloat(args[i]);
 
-			Punto a= new Punto();
-			a.x=Datos[0];
-			a.y=Datos[1];
+			Punto a= new Punto(Datos[0], Datos[1]);
 
-			Punto b= new Punto();
-			b.x=Datos[2];
-			b.y=Datos[3];
+			Punto b= new Punto(Datos[2], Datos[3]);
 
-			Punto c= new Punto();
-			c.x=Datos[4];
-			c.y=Datos[5];
+			Punto c= new Punto(Datos[4], Datos[5]);
 
 			Ventana ventana = new Ventana(controlador,a,b,c);
 			ventana.setVisible(true);
