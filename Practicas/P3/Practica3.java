@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
-public class P3 {
+public class Practica3 {
 
     public static void main(String[] args) {
         // Opcional: mal uso de argumentos en la entrada indicar uso correcto
