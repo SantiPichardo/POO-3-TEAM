@@ -9,12 +9,9 @@ public class Proyecto {
         Libreria1.agregarLibro(titulo,autor);
 
         Scanner user= new Scanner (System.in);
-
-        int opcion = 0;
-        
         do
         {
-            System.out.println("\nElige una opción");
+            System.out.println("Elige una opción");
             System.out.println("1.- Imprimir Libreria");
             System.out.println("2.- Agregar Libro");
             System.out.println("3.- Eliminar ultimo libro");
@@ -37,7 +34,6 @@ public class Proyecto {
                     Libreria1.agregarLibro(titulo,autor);
                     
                 break;
-                    
                 case 3:
                     System.out.println("Introduce el titulo");
                     System.out.print(">");
