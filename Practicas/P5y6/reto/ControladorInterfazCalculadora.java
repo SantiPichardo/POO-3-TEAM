@@ -14,9 +14,9 @@ class EvaluacionOperaciones {
 	private void parseElementos(String entrada) {
 		for(String elemento : entrada.split(" ")) {
 			if(esNumero(elemento))
-				this.operandos.add(Double.parseDouble(elemento));
+				operandos.add(Double.parseDouble(elemento));
 			else
-				this.operaciones.add(elemento);
+				operaciones.add(elemento);
 		}
 	}
 	private boolean esNumero(String s) {
