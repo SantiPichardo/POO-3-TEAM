@@ -1,10 +1,10 @@
-package mx.unam.fi.poo.py2;
+package mx.unam.poo.proyecto2;
 
 public class EmpleadoPorHoras extends Empleado {
     private double salario;
     private int horas;
 
-    public EmpleadoPorHoras(String nombre, String apellidoPaterno, int numeroSeguroSocial, int horas, double salario) {
+    public EmpleadoPorHoras(String nombre, String apellidoPaterno, String numeroSeguroSocial, int horas, double salario) {
         super(nombre, apellidoPaterno, numeroSeguroSocial);
         
         setHoras(horas);
@@ -46,7 +46,7 @@ public class EmpleadoPorHoras extends Empleado {
             salarioBase = horas * salario;
         } else {
             salarioBase = 40 * salario;
-            horasExtras = (horas - 40) * salario * 2;
+            horasExtras = (horas - 40) * salario * 1.5;
         }
         
         return salarioBase + horasExtras;

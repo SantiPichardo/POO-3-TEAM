@@ -1,28 +1,20 @@
-package mx.unam.fi.poo.py2;
+package mx.unam.poo.proyecto2;
 
-public abstract class Empleado {
-	private  String nombre, apellidoPaterno;
-	private int nss;
+public abstract class Empleado{
+    private final String nombre;
+    private final String apellidoPaterno;
+    private final String numeroSeguro;
 
-	public Empleado(String n, String ap, int s) {
-		this.nombre = n; this.apellidoPaterno = ap;
-		this.nss = s;
-	}
-public String getNombre() {
-        return nombre;
+    public Empleado(String nombre, String apellidoPaterno, String numeroSeguro) {
+        this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.numeroSeguro = numeroSeguro;
     }
 
-    public String getApellidoPaterno() {
-        return apellidoPaterno;
-    }
+    public abstract double ingresos(); 
 
-    public String getNumeroSeguroSocial() {
-        return nss;
-    }
-	public abstract double ingresos();
-
-    public String toString() {
-        return getNombre() + " " + getApellidoPaterno() +
-               "\nNúmero de seguro social: " + getNumeroSeguroSocial();
+    @Override
+    public String toString(){
+        return String.format("%s %s\nnumero de seguro social: %s", nombre, apellidoPaterno, numeroSeguro);
     }
 }

@@ -1,11 +1,11 @@
-package mx.unam.fi.poo.py2;
+package mx.unam.poo.proyecto2;
 
 public class EmpleadoAsalariado extends Empleado {
 
     private double salarioSemanal;
 
 
-    public EmpleadoAsalariado(String nombre, String apellidoPaterno, int numeroSeguroSocial, double salarioSemanal) {
+    public EmpleadoAsalariado(String nombre, String apellidoPaterno, String numeroSeguroSocial, double salarioSemanal) {
         super(nombre, apellidoPaterno, numeroSeguroSocial);
         setSalarioSemanal(salarioSemanal);
     }
@@ -36,4 +36,3 @@ public class EmpleadoAsalariado extends Empleado {
                "\nSalario semanal: $" + getSalarioSemanal();
     }
 }
-
