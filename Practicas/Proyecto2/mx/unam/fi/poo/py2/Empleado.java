@@ -20,7 +20,7 @@ public String getNombre() {
         return nss;
     }
 	public abstract double ingresos();
-	@Override
+
     public String toString() {
         return getNombre() + " " + getApellidoPaterno() +
                "\nNúmero de seguro social: " + getNumeroSeguroSocial();
