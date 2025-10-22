@@ -1,4 +1,4 @@
-package mx.unam.poo.proyecto2;
+package mx.unam.poo.py2;
 
 public class EmpleadoAsalariado extends Empleado {
 
@@ -35,4 +35,5 @@ public class EmpleadoAsalariado extends Empleado {
                "\n" + super.toString() +
                "\nSalario semanal: $" + getSalarioSemanal();
     }
+
 }
