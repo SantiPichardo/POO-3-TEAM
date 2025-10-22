@@ -44,7 +44,7 @@ public class EmpleadoPorHoras extends Empleado {
             salarioBase = horas * salario;
         } else {
             salarioBase = 40 * salario;
-            horasExtras = (horas - 40) * salario * 1.5;
+            horasExtras = (horas - 40) * salario * 2;
         }
         
         return salarioBase + horasExtras;
