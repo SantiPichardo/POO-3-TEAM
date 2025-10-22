@@ -1,4 +1,4 @@
-package mx.unam.poo.proyecto2;
+package mx.unam.fi.poo.py2;
 public class MainApp{
     public static void main (String[] args){
 
@@ -13,3 +13,4 @@ public class MainApp{
 
     }
 }
+
