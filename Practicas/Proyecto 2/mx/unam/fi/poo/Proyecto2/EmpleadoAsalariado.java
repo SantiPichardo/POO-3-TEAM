@@ -1,3 +1,5 @@
+package mx.unam.fi.poo.Proyecto2;
+
 public class EmpleadoAsalariado extends Empleado {
 
     private double salarioSemanal;
@@ -33,4 +35,5 @@ public class EmpleadoAsalariado extends Empleado {
                "\n" + super.toString() +
                "\nSalario semanal: $" + getSalarioSemanal();
     }
+
 }
