@@ -1,4 +1,4 @@
-package mx.unam.poo.proyecto2;
+package mx.unam.poo.py2;
 
 public abstract class Empleado{
     private final String nombre;
@@ -18,3 +18,4 @@ public abstract class Empleado{
         return String.format("%s %s\nnumero de seguro social: %s", nombre, apellidoPaterno, numeroSeguro);
     }
 }
+
