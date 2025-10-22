@@ -1,4 +1,4 @@
-package mx.unam.poo.proyecto2;
+package mx.unam.poo.py2;
 
 public class EmpleadoPorHoras extends Empleado {
     private double salario;
@@ -60,4 +60,5 @@ public class EmpleadoPorHoras extends Empleado {
                "\nHoras trabajadas: " + horas +
                "\nIngresos totales: $" + ingresos();
     }
+
 }
