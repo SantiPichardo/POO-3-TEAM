@@ -1,4 +1,3 @@
-
 abstract class Pokemon {
   String _nombre;
   int _ataque;
@@ -79,7 +78,9 @@ abstract class Pokemon {
     _tipoAtaque = nuevoTAtaque;
   }
 
-  void mostrarInformacion();
+  void mostrarInformacion() {
+    print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
+  }
 }
 
 //18 tipos de pokemon
@@ -87,10 +88,6 @@ abstract class Pokemon {
 class TipoNormal extends Pokemon {
   TipoNormal(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Normal", debilidad: "Lucha", nombreAtaque: atk, tipoAtaque: "Normal");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final snorlax = TipoNormal("Snorlax", 160, 110, 65, 30, "Golpe Cuerpo");
   static final eevee = TipoNormal("Eevee",   55,  55, 50, 55, "Derribo");
 }
@@ -98,10 +95,6 @@ class TipoNormal extends Pokemon {
 class TipoFuego extends Pokemon {
   TipoFuego(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Fuego", debilidad: "Agua", nombreAtaque: atk, tipoAtaque: "Fuego");
-   @override
-   void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final charmander = TipoFuego("Charmander", 39, 52, 43, 65, "Ascuas");
   static final charizard = TipoFuego("Charizard",  78, 104, 78, 100, "Lanzallamas");
 }
@@ -109,10 +102,6 @@ class TipoFuego extends Pokemon {
 class TipoAgua extends Pokemon {
   TipoAgua(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Agua", debilidad: "Eléctrico", nombreAtaque: atk, tipoAtaque: "Agua");
- @override
- void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final squirtle = TipoAgua("Squirtle",  44, 48, 65, 43, "Pistola Agua");
   static final blastoise = TipoAgua("Blastoise", 79, 83, 100, 78, "Hidrobomba");
 }
@@ -120,10 +109,6 @@ class TipoAgua extends Pokemon {
 class TipoPlanta extends Pokemon {
   TipoPlanta(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Planta", debilidad: "Fuego", nombreAtaque: atk, tipoAtaque: "Planta");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final bulbasaur = TipoPlanta("Bulbasaur", 45, 49, 49, 45, "Látigo Cepa");
   static final venusaur = TipoPlanta("Venusaur",  80, 82, 83, 80, "Rayo Solar");
 }
@@ -131,10 +116,6 @@ class TipoPlanta extends Pokemon {
 class TipoElectrico extends Pokemon {
   TipoElectrico(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Eléctrico", debilidad: "Tierra", nombreAtaque: atk, tipoAtaque: "Eléctrico");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final pikachu = TipoElectrico("Pikachu", 35, 55, 40, 90, "Impactrueno");
   static final raichu = TipoElectrico("Raichu",  60, 90, 55, 110, "Trueno");
 }
@@ -142,10 +123,6 @@ class TipoElectrico extends Pokemon {
 class TipoLucha extends Pokemon {
   TipoLucha(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Lucha", debilidad: "Volador", nombreAtaque: atk, tipoAtaque: "Lucha");
- @override
- void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final machop = TipoLucha("Machop",  70, 80, 50, 35, "Golpe Karate");
   static final machamp = TipoLucha("Machamp", 90, 130, 80, 55, "Puño Dinámico");
 }
@@ -153,10 +130,6 @@ class TipoLucha extends Pokemon {
 class TipoVolador extends Pokemon {
   TipoVolador(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Volador", debilidad: "Eléctrico", nombreAtaque: atk, tipoAtaque: "Volador");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final pidgey = TipoVolador("Pidgey",  40, 45, 40, 56, "Tornado");
   static final pidgeot = TipoVolador("Pidgeot", 83, 80, 75, 101, "Huracán");
 }
@@ -164,10 +137,6 @@ class TipoVolador extends Pokemon {
 class TipoVeneno extends Pokemon {
   TipoVeneno(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Veneno", debilidad: "Psíquico", nombreAtaque: atk, tipoAtaque: "Veneno");
- @override
- void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final ekans = TipoVeneno("Ekans", 35, 60, 44, 55, "Colmillo Veneno");
   static final arbok = TipoVeneno("Arbok", 60, 95, 69, 80, "Ácido");
 }
@@ -175,10 +144,6 @@ class TipoVeneno extends Pokemon {
 class TipoTierra extends Pokemon {
   TipoTierra(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Tierra", debilidad: "Agua", nombreAtaque: atk, tipoAtaque: "Tierra");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final diglett = TipoTierra("Diglett", 10, 55, 25, 95, "Terremoto");
   static final dugtrio = TipoTierra("Dugtrio", 35, 100, 50, 120, "Excavar");
 }
@@ -186,10 +151,6 @@ class TipoTierra extends Pokemon {
 class TipoRoca extends Pokemon {
   TipoRoca(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Roca", debilidad: "Agua", nombreAtaque: atk, tipoAtaque: "Roca");
-  @override 
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final geodude = TipoRoca("Geodude", 40, 80, 100, 20, "Lanzarrocas");
   static final golem = TipoRoca("Golem",   80, 120, 130, 45, "Avalancha");
 }
@@ -197,10 +158,6 @@ class TipoRoca extends Pokemon {
 class TipoPsiquico extends Pokemon {
   TipoPsiquico(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Psíquico", debilidad: "Bicho", nombreAtaque: atk, tipoAtaque: "Psíquico");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final abra = TipoPsiquico("Abra",     25, 20, 15, 90, "Teletransporte");
   static final alakazam = TipoPsiquico("Alakazam", 55, 50, 45, 120, "Psíquico");
 }
@@ -208,10 +165,6 @@ class TipoPsiquico extends Pokemon {
 class TipoHielo extends Pokemon {
   TipoHielo(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Hielo", debilidad: "Fuego", nombreAtaque: atk, tipoAtaque: "Hielo");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final swinub= TipoHielo("Swinub",    50, 50, 40, 50, "Rayo Hielo");
   static final mamoswine = TipoHielo("Mamoswine", 110, 130, 80, 80, "Ventisca");
 }
@@ -219,10 +172,6 @@ class TipoHielo extends Pokemon {
 class TipoBicho extends Pokemon {
   TipoBicho(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Bicho", debilidad: "Fuego", nombreAtaque: atk, tipoAtaque: "Bicho");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final caterpie = TipoBicho("Caterpie", 45, 30, 35, 45, "Disp. Demora");
   static final scizor = TipoBicho("Scizor",   70, 130, 100, 65, "Punto Bala");
 }
@@ -230,10 +179,6 @@ class TipoBicho extends Pokemon {
 class TipoFantasma extends Pokemon {
   TipoFantasma(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Fantasma", debilidad: "Fantasma", nombreAtaque: atk, tipoAtaque: "Fantasma");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final gastly = TipoFantasma("Gastly", 30, 35, 30, 80, "Lengüetazo");
   static final gengar = TipoFantasma("Gengar", 60, 65, 60, 110, "Bola Sombra");
 }
@@ -241,10 +186,6 @@ class TipoFantasma extends Pokemon {
 class TipoAcero extends Pokemon {
   TipoAcero(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Acero", debilidad: "Fuego", nombreAtaque: atk, tipoAtaque: "Acero");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final magnemite = TipoAcero("Magnemite", 25, 35, 70, 45, "Impactrueno");
   static final metagross = TipoAcero("Metagross", 80, 135, 130, 70, "Cometa");
 }
@@ -252,10 +193,6 @@ class TipoAcero extends Pokemon {
 class TipoDragon extends Pokemon {
   TipoDragon(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Dragón", debilidad: "Hada", nombreAtaque: atk, tipoAtaque: "Dragón");
-  @override 
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final dratini = TipoDragon("Dratini",   41, 64, 45, 50, "Garra Dragón");
   static final dragonite = TipoDragon("Dragonite", 91, 134, 95, 80, "Enfado");
 }
@@ -263,10 +200,6 @@ class TipoDragon extends Pokemon {
 class TipoSiniestro extends Pokemon {
   TipoSiniestro(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Siniestro", debilidad: "Hada", nombreAtaque: atk, tipoAtaque: "Siniestro");
-  @override
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
   static final houndour = TipoSiniestro("Houndour", 45, 60, 30, 65, "Mordisco");
   static final umbreon = TipoSiniestro("Umbreon",  95, 65, 110, 65, "Pulso Umbrío");
 }
@@ -274,11 +207,7 @@ class TipoSiniestro extends Pokemon {
 class TipoHada extends Pokemon {
   TipoHada(String n, int h, int a, int d, int v, String atk)
       : super(nombre: n, hp: h, ataque: a, defensa: d, velocidad: v, tipo: "Hada", debilidad: "Veneno", nombreAtaque: atk, tipoAtaque: "Hada");
-  @override 
-  void mostrarInformacion(){
-      print("$nombre ($tipo) | HP: $hp | Atk: $ataque | Def: $defensa | Vel: $velocidad | Ataque: $nombreAtaque");
-  }
-  static final togepi = TipoHada("Togepi",    35, 20, 65, 20, "Encanto");
+	  static final togepi = TipoHada("Togepi",    35, 20, 65, 20, "Encanto");
   static final gardevoir = TipoHada("Gardevoir", 68, 125, 65, 80, "Brillo Mágico");
 }
 
